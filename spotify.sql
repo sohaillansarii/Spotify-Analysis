@@ -148,4 +148,32 @@ select
        album,
 	   highest_energy - lowest_energy as energy_difference
 from t1
+
 order by 2 desc;
+
+
+
+--Query Optimization
+explain analyze 
+select 
+       artist,
+	   track,
+	   album,
+	   views
+from spotify
+where artist = '50 Cent'
+ and
+       most_played_on = 'Youtube'
+order by stream desc
+limit 20
+
+create index artist_index on spotify(artist);
+
+
+
+CREATE OR REPLACE FUNCTION github_pgsql_check()
+RETURNS void AS $$
+BEGIN
+  RAISE NOTICE 'PLpgSQL detected';
+END;
+$$ LANGUAGE plpgsql;
