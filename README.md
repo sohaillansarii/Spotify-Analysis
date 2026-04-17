@@ -17,7 +17,15 @@
 </p>
 
 ## Overview
-This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
+
+This project analyzes a Spotify dataset using SQL and Power BI to uncover insights into track performance, artist trends, and user engagement. The data is first structured and normalized, followed by advanced SQL queries including aggregations, CTEs, and window functions to extract meaningful patterns. These insights are then visualized through interactive Power BI dashboards for better interpretation and decision-making. The analysis focuses on key factors such as streaming trends, audio features, and platform-based performance. Overall, the project demonstrates an end-to-end data analysis workflow, combining SQL for data processing and Power BI for storytelling and visualization.
+
+##  Key Insights
+
+- Tracks with high energy and danceability tend to have higher streams
+- Official videos significantly increase engagement (views + likes)
+- Singles outperform albums in terms of total streams
+- YouTube vs Spotify consumption differs by track type
 
 ```sql
 -- create table
@@ -69,7 +77,7 @@ Table Name: `spotify`
 
 ---
 
-## Q1️⃣ Tracks with More Than 1 Billion Streams
+## 1️⃣ Tracks with More Than 1 Billion Streams
 
 ```sql
 SELECT title, stream 
@@ -79,7 +87,7 @@ WHERE stream > 1000000000;
 
 ---
 
-## Q2️⃣ List All Albums with Their Artists
+## 2️⃣ List All Albums with Their Artists
 
 ```sql
 SELECT DISTINCT album, artist
@@ -89,7 +97,7 @@ ORDER BY 1;
 
 ---
 
-## Q3️⃣ Total Comments for Licensed Tracks
+## 3️⃣ Total Comments for Licensed Tracks
 
 ```sql
 SELECT SUM(comments) AS total_comments
@@ -99,7 +107,7 @@ WHERE licensed = 'true';
 
 ---
 
-## Q4️⃣ Tracks Belonging to Album Type "Single"
+## 4️⃣ Tracks Belonging to Album Type "Single"
 
 ```sql
 SELECT *
@@ -109,7 +117,7 @@ WHERE album_type = 'single';
 
 ---
 
-## Q5️⃣ Total Number of Tracks by Each Artist
+## 5️⃣ Total Number of Tracks by Each Artist
 
 ```sql
 SELECT artist,
@@ -120,7 +128,7 @@ GROUP BY 1;
 
 ---
 
-## Q6️⃣ Average Danceability per Album
+## 6️⃣ Average Danceability per Album
 
 ```sql
 SELECT album,
@@ -132,7 +140,7 @@ ORDER BY 2 DESC;
 
 ---
 
-## Q7️⃣ Top 5 Tracks with Highest Energy
+## 7️⃣ Top 5 Tracks with Highest Energy
 
 ```sql
 SELECT track,
@@ -145,7 +153,7 @@ LIMIT 5;
 
 ---
 
-## Q8️⃣ Tracks with Official Video (Views & Likes)
+## 8️⃣ Tracks with Official Video (Views & Likes)
 
 ```sql
 SELECT track,
@@ -159,7 +167,7 @@ ORDER BY 2 DESC;
 
 ---
 
-## Q9️⃣ Total Views for Each Album
+## 9️⃣ Total Views for Each Album
 
 ```sql
 SELECT album,
@@ -171,7 +179,7 @@ ORDER BY 2 DESC;
 
 ---
 
-## Q🔟 Tracks Streamed More on Spotify than YouTube
+## 🔟 Tracks Streamed More on Spotify than YouTube
 
 ```sql
 SELECT *
@@ -188,7 +196,7 @@ AND streamed_on_youtube <> 0;
 
 ---
 
-## Q1️⃣1️⃣ Top 3 Most Viewed Tracks per Artist (Window Function)
+## 1️⃣1️⃣ Top 3 Most Viewed Tracks per Artist (Window Function)
 
 ```sql
 WITH ranking_artist AS (
@@ -206,7 +214,7 @@ WHERE rank <= 3;
 
 ---
 
-## Q1️⃣2️⃣ Tracks with Above-Average Liveness
+## 1️⃣2️⃣ Tracks with Above-Average Liveness
 
 ```sql
 SELECT track,
@@ -218,7 +226,7 @@ WHERE liveness > (SELECT AVG(liveness) FROM spotify);
 
 ---
 
-## Q1️⃣3️⃣ Energy Difference per Album (CTE)
+## 1️⃣3️⃣ Energy Difference per Album (CTE)
 
 ```sql
 WITH t1 AS (
@@ -235,6 +243,11 @@ ORDER BY 2 DESC;
 ```
 
 ---
+##  Recommendations
+
+- Promote high-energy tracks for better engagement
+- Focus marketing on singles rather than albums
+- Invest more in official video production
 
 Author - SOHAIL ANSARI
 
