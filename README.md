@@ -237,7 +237,7 @@ ORDER BY 2 DESC;
 ```
 
 ---
-##  Recommendations
+## Business Insights
 
 - Focus marketing on singles rather than albums
 - Invest more in official video production
