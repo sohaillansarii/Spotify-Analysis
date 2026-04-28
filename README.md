@@ -5,17 +5,16 @@
 
 
 
-
 ## Overview
 
 This project analyzes a Spotify dataset using SQL to uncover insights into track performance, artist trends, and user engagement. The data is first structured and normalized, followed by advanced SQL queries—including aggregations, CTEs, and window functions—to extract meaningful patterns. The analysis focuses on key factors such as streaming trends, audio features, and platform-based performance, ultimately demonstrating a robust data processing and analytical workflow.
 
-## Business Insights & Strategic Recommendations
+## Business Insights
 
-*   **Prioritize Single-Centric Marketing**: Transition from long-form album cycles to a high-frequency singles strategy to maintain consistent platform engagement and optimize algorithmic visibility.
-*   **Strategic Video Asset Investment**: Increase capital allocation toward high-quality official video production to enhance brand authority and drive cross-platform viewer retention.
-*   **Platform-Specific Promotion Optimization**: Reallocate marketing spend toward Spotify for assets demonstrating superior streaming-to-view ratios, ensuring capital is deployed where listener conversion is highest.
-*   **Top-Tier Asset Leveraging**: Focus promotional resources on the top 3 performing tracks per artist to capitalize on existing momentum and maximize reach across the broader streaming ecosystem.
+* **Singles Over Albums**: Audiences engage more strongly with individual tracks. Shifting to a singles-focused release strategy will maximize algorithmic reach and listener retention.
+* **Invest in Official Videos**: High-quality visual content directly drives streaming performance. Increased investment in official music videos will boost brand presence and discoverability.
+* **Prioritize Spotify Promotion**: For tracks performing stronger on Spotify than YouTube, redirecting promotional efforts toward Spotify tools like playlist pitching and Discovery Mode will deliver better returns.
+* **Double Down on Top Tracks**: Focusing promotion on each artist's top 3 most-viewed tracks ensures resources are directed where audience interest is already proven, maximizing engagement across platforms.
 
 
 ```sql
