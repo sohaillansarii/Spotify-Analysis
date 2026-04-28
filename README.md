@@ -1,24 +1,21 @@
-# Spotify Data Analysis (SQL + Power BI)
+# Spotify Data Analysis (SQL)
 
 
 ![Spotify Logo](img.avif)
-## 🎧 Spotify Dashboard
 
 
 
-### 📊 Dashboard 1
-<p align="center">
-  <img src="Spotify_Dashboard_1.png" width="800"/>
-</p>
-
-### 📊 Dashboard 2
-<p align="center">
-  <img src="Spotify_Dashboard_2..png" width="800"/>
-</p>
 
 ## Overview
 
-This project analyzes a Spotify dataset using SQL and Power BI to uncover insights into track performance, artist trends, and user engagement. The data is first structured and normalized, followed by advanced SQL queries including aggregations, CTEs, and window functions to extract meaningful patterns. These insights are then visualized through interactive Power BI dashboards for better interpretation and decision-making. The analysis focuses on key factors such as streaming trends, audio features, and platform-based performance. Overall, the project demonstrates an end-to-end data analysis workflow, combining SQL for data processing and Power BI for storytelling and visualization.
+This project analyzes a Spotify dataset using SQL to uncover insights into track performance, artist trends, and user engagement. The data is first structured and normalized, followed by advanced SQL queries—including aggregations, CTEs, and window functions—to extract meaningful patterns. The analysis focuses on key factors such as streaming trends, audio features, and platform-based performance, ultimately demonstrating a robust data processing and analytical workflow.
+
+## Business Insights & Strategic Recommendations
+
+*   **Prioritize Single-Centric Marketing**: Transition from long-form album cycles to a high-frequency singles strategy to maintain consistent platform engagement and optimize algorithmic visibility.
+*   **Strategic Video Asset Investment**: Increase capital allocation toward high-quality official video production to enhance brand authority and drive cross-platform viewer retention.
+*   **Platform-Specific Promotion Optimization**: Reallocate marketing spend toward Spotify for assets demonstrating superior streaming-to-view ratios, ensuring capital is deployed where listener conversion is highest.
+*   **Top-Tier Asset Leveraging**: Focus promotional resources on the top 3 performing tracks per artist to capitalize on existing momentum and maximize reach across the broader streaming ecosystem.
 
 
 ```sql
@@ -237,12 +234,6 @@ ORDER BY 2 DESC;
 ```
 
 ---
-## Business Insights
-
-- Focus marketing on singles rather than albums
-- Invest more in official video production
-- Allocate greater promotional efforts on Spotify for tracks showing higher streaming performance relative to YouTube.
-- Focus promotion on each artist’s top 3 highest-view tracks to maximize engagement and visibility across streaming platforms
 
 
 Author - SOHAIL ANSARI
